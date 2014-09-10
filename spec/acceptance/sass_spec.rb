@@ -2,7 +2,7 @@ require 'sass'
 require 'sass_importer'
 
 describe "SASS Compilation without errors" do
-  let(:source) { File.read File.join(path, 'all.css.scss') }
+  let(:source) { File.read File.join(path, 'all.scss') }
   let(:path)   { File.expand_path('../../../app/assets/stylesheets/pure/', __FILE__) }
   subject { Sass.compile(source, load_paths: [SassImporter.new(path)] ) }
 
